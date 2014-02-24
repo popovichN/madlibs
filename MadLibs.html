@@ -7,8 +7,10 @@
        <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 
 <style>
+
 #millennials-main {
 	display: inline-block;
+	width: 750px;
 }
 
 #millennials-main p {
@@ -49,27 +51,20 @@
 	color: red;
 	text-decoration: unerline;
 }
+#refresh-millennials {
+	display: inline-block;
+	float: left;
+	width: 150px;
+}
+
 #refresh-millennials img{
 	cursor: pointer;
 }
-
-#refresh-millennials:hover{}
-
-#refresh-millennials:hover:after {
-
-	 content: attr(tooltip);
-	position: absolute;
-    background: #fff;
-    top:15px;
-    color: #000;
-    left: 0;
-    padding: 5px;
-    z-index: 99;
-    width: auto;     
-    white-space: nowrap;
-     -moz-box-shadow:    2px 2px 3px 3px #ccc;
-  	-webkit-box-shadow: 2px 2px 3px 3px #ccc;
-  	box-shadow:         2px 2px 3px 3px #ccc;
+#fillIn{
+	font-family: Helvetica;
+	font-size: 24px;
+	color: red;
+	padding-left: 15px;
 }
 
 
@@ -429,15 +424,18 @@ $(document).ready(function () {
 
 <body>
 
+ 	<!-- create fill-in-the-blank sentences --> 
 	<div id="millennials-main">
 		<p>Millennials are <span id="quote-one" class="blank-quote"></span>. <span id="quote-one-source" class="blank-source"></span></p>
 		<p>And they're <span id="quote-two" class="blank-quote"></span>. <span id="quote-two-source" class="blank-source"></p>
 		<p>Also they're <span id="quote-three" class="blank-quote"></span>. <span id="quote-three-source" class="blank-source"></p>
 		<p>The thing is, <span id="quote-four" class="blank-quote"></span>. <span id="quote-four-source" class="blank-source"></p>
 	</div>
+
+	<!-- fill-in-the-blank button --> 
 	<div id="refresh-millennials">
-			<div id="fillIn"><span display="none;">RE-</span>FILL!</p>
 			<img src="pencil.svg" />
+			<div id="fillIn"><span display="none;"></span><span>Click <br/>to <br/>Fill!</span></p>
 	</div>
 
 </body>
