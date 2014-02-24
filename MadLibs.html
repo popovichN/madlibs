@@ -385,15 +385,15 @@ $(document).ready(function () {
 	var indexFour;
 
 	// main function
-	function setRandom() {
+	function makeRandom() {
 		index = Math.round(Math.random() * (Millennials.length - 1));
 		indexTwo = Math.round(Math.random() * (moreMillennials.length - 1));
 		indexThree = Math.round(Math.random() * (evenMoreMillennials.length - 1));
 		indexFour = Math.round(Math.random() * (otherMillennials.length - 1));
-		updateQuote()
+		addQuote()
 	}
 
-	function updateQuote() {
+	function addQuote() {
 		
 		// fills mad-lib content on click
 
@@ -415,7 +415,7 @@ $(document).ready(function () {
 	}	
 
 	// click to fill!
-	$("#refresh-millennials").on('click', setRandom);
+	$("#refresh-millennials").on('click', makeRandom);
 
 });
 
