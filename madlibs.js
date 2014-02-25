@@ -122,6 +122,11 @@
 	{ 	'quote': 'skeptics',
 		'source': 'B2C',
 		'url': 'http://www.business2community.com/marketing/market-millennials-millennial-mouth-0780483'
+	},
+	{
+		'quote': 'masters of the gig economy',
+		'source': 'The Guardian',
+		'url':'http://www.theguardian.com/money/us-money-blog/2014/feb/24/job-hopping-interns-serious-job'
 	}]
 
 	var evenMoreMillennials = [

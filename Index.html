@@ -61,6 +61,7 @@
 
 #refresh-millennials img{
 	cursor: pointer;
+	float: left;
 }
 #fillIn{
 	font-family: Helvetica;
@@ -70,6 +71,28 @@
 	cursor: pointer;
 }
 
+#attribution{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	float: left;
+	text-align: left;
+	color: #ccc;
+	font-family: Helvetica;
+	font-size: 11px;
+	margin: 75px 0px 0px 160px;
+
+}
+
+#attribution a {
+	color: #ccc;
+	cursor: pointer;
+	text-decoration: none;
+}
+#attribution a:hover {
+	color: red;
+	font-weight: bold;
+}
 /* Mobile CSS start */
 @media only screen and (max-width: 480px) {
 	#millennials-main {
@@ -92,14 +115,17 @@
 	#refresh-millennials {
 		display: inline-block;
 		float: left;
-		width: 150px;
+		width: 300px;
 	}
 	#fillIn{
 		font-family: Helvetica;
-		font-size: 14px;
+		font-size: 15px;
 		color: red;
-		padding-left: 15px;
+		padding-left: 0px;
 		cursor: pointer;
+		display: inline;
+		float: left;
+		padding-top: 35px;
 	}
 /* Mobile CSS end */
 }
@@ -122,6 +148,8 @@
 		<p>Also they're <span id="quote-three" class="blank-quote"></span>. <span id="quote-three-source" class="blank-source"></p>
 		<p>The thing is, <span id="quote-four" class="blank-quote"></span>. <span id="quote-four-source" class="blank-source"></p>
 	</div>
+
+	<dic id="attribution">MadLibs project by <a href="http://www.nadjapopovich.com">Nadja Popovich</a>. Pencil graphic by Spencer Harrison from the Noun Project.</div>
 
 </body>
 
