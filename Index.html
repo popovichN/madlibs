@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Millennial MadLibs</title>
+
+       <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+       <script src="madlibs.js" type="text/javascript"></script>
+
+<style>
+#millennials-main {
+	display: inline-block;
+	width: 750px;
+}
+
+#millennials-main p {
+	font-family: Helvetica;
+	font-size: 40px;
+	font-weight: bold;
+	color: #000;
+}
+
+#millennials-main .blank-quote{
+	padding-left: 350px;
+	border-bottom: 5px solid #000000;
+	min-width: 100px;
+}
+
+#millennials-main .filled-quote a {
+	color: red;
+	border-bottom: 5px solid #000000;
+	min-width: 100px;
+	text-decoration: none;
+}
+.filled-source p {
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ccc;
+}
+.filled-source a, #filled-source a {
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ccc;
+	text-decoration: none;
+}
+.filled-source a:hover, .filled-source a:hover {
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	color: red;
+	text-decoration: unerline;
+}
+#refresh-millennials {
+	display: inline-block;
+	float: left;
+	width: 110px;
+	margin-right: 40px;
+}
+
+#refresh-millennials img{
+	cursor: pointer;
+}
+#fillIn{
+	font-family: Helvetica;
+	font-size: 24px;
+	color: red;
+	padding-left: 15px;
+	cursor: pointer;
+}
+
+/* Mobile CSS start */
+@media only screen and (max-width: 480px) {
+	#millennials-main {
+		display: inline-block;
+		width: 300px;
+	}
+	#millennials-main p {
+		font-size: 24px;
+	}
+	#millennials-main .blank-quote{
+		padding-left: 150px;
+		border-bottom: 3px solid #000000;
+	}
+	#millennials-main .filled-quote {
+		border-bottom: 3px solid #000000;
+	}
+	#millennials-source p {
+		font-size: 14px;
+	}
+	#refresh-millennials {
+		display: inline-block;
+		float: left;
+		width: 150px;
+	}
+	#fillIn{
+		font-family: Helvetica;
+		font-size: 14px;
+		color: red;
+		padding-left: 15px;
+		cursor: pointer;
+	}
+/* Mobile CSS end */
+}
+
+</style>
+</head>
+
+<body>
+
+	<!-- fill-in-the-blank button --> 
+	<div id="refresh-millennials">
+			<img src="pencil.svg" />
+			<div id="fillIn">&#171; Click to fill!</div>
+	</div>
+
+ 	<!-- create fill-in-the-blank sentences --> 
+	<div id="millennials-main">
+		<p>Millennials are <span id="quote-one" class="blank-quote"></span>. <span id="quote-one-source" class="blank-source"></span></p>
+		<p>And they're <span id="quote-two" class="blank-quote"></span>. <span id="quote-two-source" class="blank-source"></p>
+		<p>Also they're <span id="quote-three" class="blank-quote"></span>. <span id="quote-three-source" class="blank-source"></p>
+		<p>The thing is, <span id="quote-four" class="blank-quote"></span>. <span id="quote-four-source" class="blank-source"></p>
+	</div>
+
+</body>
+
+
+</html>

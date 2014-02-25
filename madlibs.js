@@ -1,79 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-	<title>Millennial MadLibs</title>
-
-       <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-
-<style>
-
-#millennials-main {
-	display: inline-block;
-	width: 750px;
-}
-
-#millennials-main p {
-	font-family: Helvetica;
-	font-size: 40px;
-	font-weight: bold;
-	color: #000;
-}
-
-#millennials-main .blank-quote{
-	padding-left: 350px;
-	border-bottom: 5px solid #000000;
-	min-width: 100px;
-}
-
-#millennials-main .filled-quote {
-	color: red;
-	border-bottom: 5px solid #000000;
-	min-width: 100px;
-}
-#millennials-source p {
-	font-family: Helvetica;
-	font-size: 14px;
-	font-weight: bold;
-	color: #ccc;
-}
-#millennials-main a, #millennials-source a {
-	font-family: Helvetica;
-	font-size: 14px;
-	font-weight: bold;
-	color: #ccc;
-	text-decoration: none;
-}
-#millennials-main a:hover, #millennials-source a:hover {
-	font-family: Helvetica;
-	font-size: 14px;
-	font-weight: bold;
-	color: red;
-	text-decoration: unerline;
-}
-#refresh-millennials {
-	display: inline-block;
-	float: left;
-	width: 150px;
-}
-
-#refresh-millennials img{
-	cursor: pointer;
-}
-#fillIn{
-	font-family: Helvetica;
-	font-size: 24px;
-	color: red;
-	padding-left: 15px;
-}
-
-
-</style>
-<script type="text/javascript">
-
-
-$(document).ready(function () { 
-
 	//each of next three variable quotes take "millennials are..." begining 
 
 	var Millennials = [
@@ -384,6 +308,8 @@ $(document).ready(function () {
 	var indexThree;
 	var indexFour;
 
+$(document).ready(function () { 
+	
 	// main function
 	function makeRandom() {
 		index = Math.round(Math.random() * (Millennials.length - 1));
@@ -394,51 +320,31 @@ $(document).ready(function () {
 	}
 
 	function addQuote() {
-		
+
 		// fills mad-lib content on click
 
 		// sentence one: millennials are
-		$('#quote-one').removeClass('blank-quote').addClass('filled-quote').html('' + Millennials[index]['quote'] + '');
+		$('#quote-one').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + Millennials[index]['url'] + '">' + Millennials[index]['quote'] + '</a>');
 		$('#quote-one-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + Millennials[index]['url'] + '">(' + Millennials[index]['source'] + ')</a>');
 
 		// two: and they're
-		$('#quote-two').removeClass('blank-quote').addClass('filled-quote').html('' + moreMillennials[indexTwo]['quote'] + '');
+		$('#quote-two').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + moreMillennials[indexTwo]['url'] + '">' + moreMillennials[indexTwo]['quote'] + '</a>');
 		$('#quote-two-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + moreMillennials[indexTwo]['url'] + '">(' + moreMillennials[indexTwo]['source'] + ')</a>');
-		
+
 		// three: also they're
-		$('#quote-three').removeClass('blank-quote').addClass('filled-quote').html('' + evenMoreMillennials[indexThree]['quote'] + '');
+		$('#quote-three').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + evenMoreMillennials[indexThree]['url'] + '">' + evenMoreMillennials[indexThree]['quote'] + '</a>');
 		$('#quote-three-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + evenMoreMillennials[indexThree]['url'] + '">(' + evenMoreMillennials[indexThree]['source'] + ')</a>');
 
 		// four: the thing is
-		$('#quote-four').removeClass('blank-quote').addClass('filled-quote').html('' + otherMillennials[indexFour]['quote'] + '');
+		$('#quote-four').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + otherMillennials[indexFour]['url'] + '">' + otherMillennials[indexFour]['quote'] + '</a>');
 		$('#quote-four-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + otherMillennials[indexFour]['url'] + '">(' + otherMillennials[indexFour]['source'] + ')</a>');
 	}	
+	
+	function reFill() {
+		$('#fillIn').html('&#171; Re-fill!');
+	}
 
 	// click to fill!
-	$("#refresh-millennials").on('click', makeRandom);
+	$("#refresh-millennials").on('click', makeRandom).on('click', reFill);	
 
 });
-
-</script>
-</head>
-
-<body>
-
- 	<!-- create fill-in-the-blank sentences --> 
-	<div id="millennials-main">
-		<p>Millennials are <span id="quote-one" class="blank-quote"></span>. <span id="quote-one-source" class="blank-source"></span></p>
-		<p>And they're <span id="quote-two" class="blank-quote"></span>. <span id="quote-two-source" class="blank-source"></p>
-		<p>Also they're <span id="quote-three" class="blank-quote"></span>. <span id="quote-three-source" class="blank-source"></p>
-		<p>The thing is, <span id="quote-four" class="blank-quote"></span>. <span id="quote-four-source" class="blank-source"></p>
-	</div>
-
-	<!-- fill-in-the-blank button --> 
-	<div id="refresh-millennials">
-			<img src="pencil.svg" />
-			<div id="fillIn"><span display="none;"></span><span>Click <br/>to <br/>Fill!</span></p>
-	</div>
-
-</body>
-
-
-</html>
