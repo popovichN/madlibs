@@ -329,20 +329,20 @@ $(document).ready(function () {
 		// fills mad-lib content on click
 
 		// sentence one: millennials are
-		$('#quote-one').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + Millennials[index]['url'] + '">' + Millennials[index]['quote'] + '</a>');
-		$('#quote-one-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + Millennials[index]['url'] + '">(' + Millennials[index]['source'] + ')</a>');
+		$('#quote-one').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + Millennials[index]['url'] + '" target="_blank">' + Millennials[index]['quote'] + '</a>');
+		$('#quote-one-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + Millennials[index]['url'] + '" target="_blank">(' + Millennials[index]['source'] + ')</a>');
 
 		// two: and they're
-		$('#quote-two').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + moreMillennials[indexTwo]['url'] + '">' + moreMillennials[indexTwo]['quote'] + '</a>');
-		$('#quote-two-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + moreMillennials[indexTwo]['url'] + '">(' + moreMillennials[indexTwo]['source'] + ')</a>');
+		$('#quote-two').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + moreMillennials[indexTwo]['url'] + '" target="_blank">' + moreMillennials[indexTwo]['quote'] + '</a>');
+		$('#quote-two-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + moreMillennials[indexTwo]['url'] + '" target="_blank">(' + moreMillennials[indexTwo]['source'] + ')</a>');
 
 		// three: also they're
-		$('#quote-three').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + evenMoreMillennials[indexThree]['url'] + '">' + evenMoreMillennials[indexThree]['quote'] + '</a>');
-		$('#quote-three-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + evenMoreMillennials[indexThree]['url'] + '">(' + evenMoreMillennials[indexThree]['source'] + ')</a>');
+		$('#quote-three').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + evenMoreMillennials[indexThree]['url'] + '" target="_blank">' + evenMoreMillennials[indexThree]['quote'] + '</a>');
+		$('#quote-three-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + evenMoreMillennials[indexThree]['url'] + '" target="_blank">(' + evenMoreMillennials[indexThree]['source'] + ')</a>');
 
 		// four: the thing is
-		$('#quote-four').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + otherMillennials[indexFour]['url'] + '">' + otherMillennials[indexFour]['quote'] + '</a>');
-		$('#quote-four-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + otherMillennials[indexFour]['url'] + '">(' + otherMillennials[indexFour]['source'] + ')</a>');
+		$('#quote-four').removeClass('blank-quote').addClass('filled-quote').html('<a href="' + otherMillennials[indexFour]['url'] + '" target="_blank">' + otherMillennials[indexFour]['quote'] + '</a>');
+		$('#quote-four-source').removeClass('blank-source').addClass('filled-source').html('<a href="' + otherMillennials[indexFour]['url'] + '" target="_blank">(' + otherMillennials[indexFour]['source'] + ')</a>');
 	}	
 	
 	function reFill() {
