@@ -299,13 +299,17 @@
 		'source': 'Los Angeles Times',
 		'url': 'http://articles.latimes.com/2013/dec/10/business/la-fi-mo-survey-millennials-job-security-20131210'
 	},
-	{	'quote': 'American millennials didn\'t just grown up on chicken nuggets, but also on organic, gluten-free and vegan foods',
+	{	'quote': 'American millennials didn\'t just grow up on chicken nuggets, but also on organic, gluten-free and vegan foods',
 		'source': 'Quartz',
 		'url': 'http://qz.com/74274/kfcs-boneless-chicken-is-supposed-to-please-american-millennials-heres-why-it-wont/'
 	},
 	{	'quote': 'when you look at millennials, the one thing that characterizes them is contradiction',
 		'source': 'Quartz',
 		'url': 'http://qz.com/74274/kfcs-boneless-chicken-is-supposed-to-please-american-millennials-heres-why-it-wont/'
+	},
+	{	'quote': 'it\'s debatable whether millennials are special, but one thing is certain: their relationship with food is',
+		'source': 'AdWeek',
+		'url': 'http://www.adweek.com/news/press/food-wine-launches-new-brand-millennials-155939'
 	}];
 
 	var index;

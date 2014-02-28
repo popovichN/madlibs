@@ -2,7 +2,9 @@
 
 <html lang="en">
 <head>
-	<title>Millennial MadLibs</title>
+	<title>Millennial Mad Libs</title>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
        <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
        <script src="js/madlibs.js" type="text/javascript"></script>
@@ -10,7 +12,7 @@
 <style>
 #millennials-main {
 	display: inline-block;
-	width: 750px;
+	max-width: 750px;
 	margin: 0;
 	padding: 0;
 }
@@ -28,7 +30,7 @@
 }
 
 #millennials-main .filled-quote a {
-	color: red;
+	color: #e30613;
 	border-bottom: 5px solid #000000;
 	min-width: 100px;
 	text-decoration: none;
@@ -50,7 +52,7 @@
 	font-family: Helvetica;
 	font-size: 14px;
 	font-weight: bold;
-	color: red;
+	color: #e30613;
 	text-decoration: none;
 }
 #refresh-millennials {
@@ -66,7 +68,7 @@
 }
 #fillIn{
 	font: normal 24px Helvetica;
-	color: red;
+	color: #e30613;
 	padding-left: 15px;
 	cursor: pointer;
 }
@@ -80,7 +82,7 @@
 	color: #ccc;
 	font-family: Helvetica;
 	font-size: 11px;
-	margin: 75px 0px 0px 160px;
+	margin: -20px 0px 0px 160px;
 
 }
 
@@ -90,9 +92,20 @@
 	text-decoration: none;
 }
 #attribution a:hover {
-	color: red;
+	color: #e30613;
 	font-weight: bold;
 }
+
+#madlibs-banner {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	float: left;
+	margin: 75px 0px 0px 160px;
+}
+#madlibs-banner img{	
+}
+
 
 /* Mobile CSS start */
 @media only screen and (max-width: 480px) {
@@ -121,13 +134,26 @@
 	}
 	#fillIn{
 		font: bold 15px Helvetica;
-		color: red;
+		color: #e30613;
 		padding-left: 0px;
 		cursor: pointer;
 		display: inline;
 		float: left;
 		padding-top: 35px;
 	}
+	#attribution{
+		font-size: 14px;
+	margin: -20px 0px 0px 0px;
+	width: 100%;
+
+	}
+	#madlibs-banner {
+	margin: 60px 0px 0px 0px;
+	}
+	#madlibs-banner img{
+		width: 75%;	
+	}
+
 /* Mobile CSS end */
 }
 
@@ -135,6 +161,8 @@
 </head>
 
 <body>
+
+	
 
 	<!-- fill-in-the-blank button --> 
 	<div id="refresh-millennials">
@@ -150,7 +178,8 @@
 		<p>The thing is, <span id="quote-four" class="blank-quote"></span>. <span id="quote-four-source" class="blank-source"></p>
 	</div>
 
-	<dic id="attribution">MadLibs project by <a href="http://www.nadjapopovich.com">Nadja Popovich</a>. Pencil graphic by Spencer Harrison from the Noun Project.</div>
+	<div id="madlibs-banner"><img src="img/madlibs-pic.svg" /></div>
+	<dic id="attribution">Project by <a href="http://www.nadjapopovich.com">Nadja Popovich</a>. <a href="about.html">How does it work?</a> Pencil graphic by Spencer Harrison from the Noun Project.</div>
 
 </body>
 
